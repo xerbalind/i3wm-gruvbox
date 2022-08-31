@@ -1,0 +1,190 @@
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted =   %free%
+label-mounted-foreground = ${colors.red}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.alert}
+
+
+[module/i3]
+type = internal/i3
+
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+pin-workspaces = false
+
+
+
+; Sort the workspaces by index instead of the default
+; sorting that groups the workspaces by output
+; Default: false
+index-sort = true
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = false
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Wrap around when reaching the first/last workspace
+; Default: true
+wrapping-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+
+; Focused workspaces
+label-focused = %index%
+label-focused-background = ${colors.aqua}
+label-focused-foreground = ${colors.black}
+label-focused-padding = 3
+label-focused-margin = 1
+
+; label-occupied = %index%
+; label-occupied-padding = 3
+; label-occupied-background = ${colors.black}
+; label-occupied-foreground = ${colors.white}
+
+; UnFocused workspaces
+label-unfocused = %index%
+label-unfocused-foreground = ${colors.yellow}
+label-unfocused-padding = 3
+
+label-urgent = %index%
+label-urgent-background = ${colors.red}
+label-urgent-padding = 3
+
+[module/mpd]
+type = internal/mpd
+format-online =  <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+icon-prev = "  "
+icon-stop = "  "
+icon-play = "  "
+icon-pause = "  "
+icon-next = "  "
+label-song-ellipsis = true
+
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+interval = 3.0
+format-connected =   <label-connected>
+format-connected-foreground = ${colors.green}
+label-connected = %essid%
+format-disconnected =   Disconnected
+format-disconnected-foreground = ${colors.alert}
+
+[module/date]
+type = internal/date
+interval = 5
+time =   %I:%M %p
+time-alt =   %d-%m-%Y
+label = %date% %time%
+label-foreground = ${colors.yellow}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+label-volume =   %percentage%%
+label-volume-foreground = ${colors.blue}
+label-muted =   Muted
+label-muted-foreground = #666
+
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 97
+
+; Look for battery/adapter: "ls -l /sys/class/power_supply"
+battery = BAT0
+adapter = ADP0
+
+time-format = %H:%M
+
+format-charging = <animation-charging>  <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+label-discharging = %percentage% (%time%)
+label-charging = %percentage% (%time%)
+
+format-charging-foreground = ${colors.green}
+format-discharging-foreground = ${colors.purple}
+
+format-full-prefix = "  "
+format-full-prefix-foreground = #a1a112
+format-full-foreground = #a1a112
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+label-open = 
+label-open-foreground = ${colors.red}
+label-close = cancel
+label-close-foreground = ${colors.red}
+label-separator = |
+menu-0-0 = reboot
+menu-0-0-exec = reboot
+menu-0-1 = power off
+menu-0-1-exec = poweroff
+
+[module/cpu]
+type = internal/cpu
+format = <label> 
+label =  %percentage%%
+label-foreground = ${colors.blue}
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = amdgpu_bl0
+
+; (unreleased)
+; Use the `/sys/class/backlight/actual-brightness` file
+; rather than the regular `brightness` file.
+; Defaults to true unless the specified card is an amdgpu backlight.
+use-actual-brightness = true
+
+; Make sure you have permission to acces the brightness file
+enable-scroll = true
+
+format = <label>
+
+label =  %percentage%%
+label-foreground = ${colors.yellow}
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
