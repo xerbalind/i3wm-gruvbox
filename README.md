@@ -27,5 +27,16 @@ have some dpi,gtk scaling settings. You can ignore these (when not in my situati
 See: https://wiki.archlinux.org/title/HiDPI
 
 ## Screenshots
+![home](assets/wallpaper.png)
+![clients](assets/clients.png)
+![editor](assets/neovim.png)
+![home](assets/wallpaper.png)
+![launcher](assets/rofi.png)
+![browser](assets/firefox.png)
+![floating](assets/neofetch.png)
+![filemanager](assets/files.png)
+
+
+
 
 
