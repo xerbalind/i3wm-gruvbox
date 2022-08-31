@@ -23,4 +23,9 @@ These dotfiles are meant for a HiDPI laptop,
 occasionally connected with a monitor with normal pixel density.
 
 So for this setup to work, I wrote a bash script and 
-have some dpi,gtk scaling settings. You can ignore those (if you're not in my situation)
+have some dpi,gtk scaling settings. You can ignore these (when not in my situation) <br />
+See: https://wiki.archlinux.org/title/HiDPI
+
+## Screenshots
+
+
