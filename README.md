@@ -10,7 +10,7 @@ My configuration files for a simple gruvbox rice in i3wm.
   A really handy tool is lxappearance to setup gtk themes, icons, system fonts, ...
 - **Terminal** [`alacritty`](https://github.com/alacritty/alacritty)
 - **Editor** [`neovim`](https://github.com/neovim/neovim) <br />
-  This config in repo likely break in the future.
+  This config in repo will likely break in near future.
 - **Launcher** [`rofi`](https://github.com/davatorium/rofi)
 - **File Manager** [`nautilus`](https://gitlab.gnome.org/GNOME/nautilus)
 - **Bar** [`polybar`](https://github.com/polybar/polybar)
