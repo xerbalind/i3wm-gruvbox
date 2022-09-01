@@ -5,6 +5,6 @@ if not status_ok then
 end
 
 dodona.setup({
-	token = "CYOR0gnhC7TQ4d_mQZn7CGf_xh4XRe3yK9YqO7qcREY",
+	token = "<token-here>",
 	base_url = "https://dodona.ugent.be",
 })
